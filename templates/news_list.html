@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>読んだニュースリスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h1>読んだニュースリスト</h1>
+            <ul class="news-list">
+                {% for session in news_sessions %}
+                <li><a href="{{ url_for('news_session', session_id=session.session_id) }}">{{ session.min_timestamp }} のニュース</a></li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('index') }}" class="neumorphism-button">戻る</a> <!-- 戻るボタン -->
+        </div>
+    </div>
+</body>
+</html>

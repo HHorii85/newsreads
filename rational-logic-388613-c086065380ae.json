@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "rational-logic-388613",
+  "private_key_id": "c086065380aee33a8b1b069410829deaa37d4603",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4HvtQ+E7Tbvj+\n2RxE5jljCvKtSNoKE7bck180XdL2IQAfG7RjqnJRLuUv4eMMB74mZzwBhdlyXTLR\nILizWvEsRVap1G2sBJrrbfuxd28ki3vxPkBNQKGA8RvhWVUXzrjnrvJOtausnnR2\ntBKoJMvDGogkqUjfxgnmW8D76ZqTR4uoXu9xj3lwAticZhffFIgCascr0R0KAMp3\nw57F+o7AqD6XwKzwCD2aPAIMw1WtlvRzLipEmIvlGce36U0rX8EKGBTBJ5yhlT3i\n2SCSqdVtuZvylwAR4OwzcZ1+gZvtOJtjxkdEhGElOG9neGIQZ5W7ephY2buUyRHv\nSabIiEpXAgMBAAECggEAJSNCp+Nd6vHQUX8zX4Zcfui/aEpwiGXPlZA4PNTL749a\neevZp9zCcDOYUN8sL8oEBbT++oOoB5Ra4qnJ94tZaAeYYmsRsAfBw8kMYpBnn6Ru\n3Isk5zApI1v+tqaRLlspGrpD77JfLVNMxICv3rCFVRYt7c8jftdwOcG6HFXTMu97\n71/mMkZ6ltW4tR51HVht/a4HcvRRM5Nl4hcSyxE4ox5u/MRTCiYk3S0R2SzHHfyo\nuqJzQ8pawi7uKY7cmuepg/r8o5gPNfEtnICDDirdqpvFHA1LuXzEt9/npyUxZaV7\nJKbYbsCObnfbn80AeEoWCiV4+4rbIvyELulerQ+gUQKBgQD6/+Kq6KdnXtPBId4R\nNkXIv+wTadx9jc1XA6BUp6UCQGjLXcxlRxfDSgfO8w58+hV0yQj0BUKqL3LxWTHP\njsYkv3iY/Vv7kYd1KtM4gQcTa82UdiOgAEryJUjtcbD1VlWkFSY/L7CfSeFxvaUb\nBaV+jhIeNlbIwaevCF74JPXqyQKBgQC7ygLjuG/oIi5sOkWEt4jeKnYU79aaQiY3\nD5Iauh1QxPoFTPwqaHJilWtkdbPVc8bGz1Mhe3l3Q2XgfS3aV0iiAuuKloX+GOWH\n2UWwAqXhBdNS18rlFDq9QLYvcGX40iE2cBv5BbjLz3tvnrJyYKy0O02TO6Hm1xZ6\n3nFrfQv8HwKBgQDdosJ2hEX+I1/8tHkw3am1YLOHWP0X6PUfFtamqfotCM8AdO0d\nqS80hNRsS3fJp9L2cuZzA4ogWRG4SDiRvNL+dAx7m41zkMf6EDy/MkAbSCAaLk+6\n40dKlt3UvYWyve+Vmg9R0Dy4CzcFhp6aQ9wk6jLZdsYfM9Fr34pst8Zm8QKBgQCd\nRos0/Xt8B2Sp8APZK33N0/Ihht1NRKmM49WR3N5Ajzh2yAtJ2UAzoMDY2ltLIjQQ\nvgL5v9fzMtdYNH76pq+GQLvUzkxai69xH19mElGrLJ3YfDLJuS+Y4WG0SYad5h86\n4JoM7eXfjF3tFhSOBrmeGSzXatIl625AaZzEUW6AMQKBgE/4b0or63LwKW1jeevK\nawL5FKAZV5ud3ows97dvjCPhCouBDskTHB4mHfyFbbQ4h1s5VYUBCpFfUwTQMMTV\nzr+fcCWHUXqz3Ef7+eZxOTWQb6V00B8dnRt1Y6ZggOlVOzBlb6/SFwExwW1r8gAA\nnXJUCMuSkX2Mo8BCfACLJPxV\n-----END PRIVATE KEY-----\n",
+  "client_email": "horii-971@rational-logic-388613.iam.gserviceaccount.com",
+  "client_id": "106212844984668720231",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/horii-971%40rational-logic-388613.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

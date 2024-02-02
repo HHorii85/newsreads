@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>クイックニュース</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <h1>クイックニュース</h1>
+    <h2 id="user-greeting"></h2>
+    <div id="login-logout">
+        {% if user_logged_in %}
+            <a href="/logout" class="neumorphism-button">ログアウト</a>
+            <a href="/news_list" class="neumorphism-button">ニュースリスト</a>
+        {% else %}
+            <a href="/login" class="neumorphism-button">ログイン</a>
+            <a href="/signup" class="neumorphism-button">サインイン</a>
+        {% endif %}
+    </div>    
+    <h2>現在地の天気</h2>
+    <!-- 天気状態の表示 -->
+    <div id="weather-container"></div>
+    
+    <label for="category-select">カテゴリを選択:</label>
+    <select id="category-select">
+        <option value="">--カテゴリを選択してください--</option>
+        <option value="NATION">国内ニュース</option>
+        <option value="WORLD">国際ニュース</option>
+        <option value="BUSINESS">ビジネス関連</option>
+        <option value="POLITICS">政治関連</option>
+        <option value="ENTERTAINMENT">エンタメ関連</option>
+        <option value="SPORTS">スポーツ関連</option>
+        <option value="SCITECH">テクノロジー関連</option>
+    </select>
+    
+    <div id="news-container">
+        <!-- ニュースのタイトルとリンクがここに表示される -->
+    </div>
+    <script>
+        var userLoggedIn = {{ user_logged_in|tojson }};
+        var userCategory = {{ user_category|tojson }};
+        var newsSessionId = "{{ session['news_session_id'] }}";
+    </script>
+    <script src="{{ url_for('static', filename='new_app.js') }}"></script>      
+    <button id="get-weather" hidden>現在地の天気を取得</button>
+    <footer>
+        <p>BGM by OtoLogic (CC BY 4.0)</p>
+    </footer>
+</body>
+</html>

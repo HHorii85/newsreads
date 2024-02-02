@@ -1,0 +1,243 @@
+body {
+    background-color: #e0f2f1; /* 淡い青色の背景 */
+    background: linear-gradient(45deg, #56b4e0, #79e9f6, #7ce79c, #aef789, #f6ed73, #ff9462, #e37575, #fd67b0, #746df3); /* グラデーションを定義 */
+    background-size: 500% 500%; /* サイズを大きく引き伸ばす */
+    background-attachment: fixed; /* スクロールしても背景が固定される */
+    animation: bggradient 180s ease infinite; /* アニメーションを定義 */
+    text-align: center; /* すべてのテキストを中央揃えに */
+    font-family: Arial, sans-serif; /* フォントを指定 */
+}
+
+h1 {
+    text-align: center; /* h1を中央に */
+    margin-top: 20px; /* 上部の余白 */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+#weather-container {
+    font-size: 18px; /* h2より小さく */
+    font-weight: bold; /* h2より軽く */
+    color: #333; /* h2より少し暗めの色 */
+    margin-top: 10px; /* 上に少し余白を追加 */
+    padding: 10px; /* 内容に少し余白を追加 */
+}
+
+#login-logout {
+    position: absolute; /* ポジションを絶対位置に */
+    left: 20px; /* 左側に配置 */
+    top: 20px; /* 上部から少し下げる */
+}
+
+#news-container h3 {
+    font-weight: bold; /* タイトルを太字に */
+}
+
+.neumorphism-button {
+    background-color: transparent; /* 背景を透明に */
+    border: none; /* ボーダーなし */
+    border-radius: 10px; /* 角を丸く */
+    padding: 10px 20px; /* パディング */
+    margin: 10px; /* 余白 */
+    font-size: 16px; /* フォントサイズ */
+    color: #333; /* テキスト色 */
+    cursor: pointer; /* カーソルをポインターに */
+    text-align: center; /* テキストを中央揃えに */
+    text-decoration: none;
+    box-shadow:
+        -3px -3px 12px rgba(255, 255, 255, 0.7),
+        3px 3px 12px rgba(17, 17, 17, 0.3),
+        inset 3px 3px 12px transparent,
+        inset -3px -3px 12px transparent;
+    transition: box-shadow ease-in-out 0.3s;
+}
+
+.neumorphism-button:hover {
+    box-shadow:
+        -3px -3px 12px transparent,
+        3px 3px 12px transparent,
+        inset 3px 3px 12px rgba(17, 17, 17, 0.3),
+        inset -3px -3px 12px rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* ふわっと現れて消えるアニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOutUp 1s ease forwards;
+}
+
+/* 背景色変化のためのアニメーション */
+@keyframes bggradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+/*ログイページのスタイル*/
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form labal {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button hover {
+    background-color: #357ae8;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/*ニュースリスト表示ページ*/
+.news-session-container {
+    width: 500px;
+    text-align: left;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.news-list a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.new-list a:hover {
+    text-decoration: underline;
+}
+
+.button-center {
+    text-align: center;
+}
+
+.highlighted {
+    background-color: #f0e68c;
+    font-weight: bold;
+}
+
+/* モバイル端末向けのスタイル */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%; /* 画面幅いっぱいに広がるように設定 */
+    }
+
+    h1 {
+        font-size: 24px; /* h1のフォントサイズを調整 */
+        margin-top: 10px; /* 上部の余白を調整 */
+    }
+
+    .neumorphism-button {
+        padding: 8px 15px; /* ボタンのパディングを調整 */
+        font-size: 14px; /* ボタンのフォントサイズを調整 */
+    }
+
+    #login-logout {
+        position: static; /* モバイルでは通常の流れに */
+        margin: 10px 0; /* 余白を追加 */
+    }
+
+    #news-container h3 {
+        font-size: 18px; /* ニュースタイトルのフォントサイズを調整 */
+    }
+
+    .login-container {
+        background-color: white;
+        width: 300px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+}

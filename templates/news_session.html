@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ニュースセッション</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container news-session-container">
+            <h1>ニュースセッション</h1>
+            <ul class="news-list">
+                {% for news_item in news_items %}
+                <li class="{% if news_item.clicked %}highlighted{% endif %}">
+                    <a href="{{ news_item.link }}">{{ news_item.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="button-center">
+                <a href="{{ url_for('news_list') }}" class="neumorphism-button">戻る</a> <!-- 戻るボタン -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
