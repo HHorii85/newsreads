@@ -10,19 +10,24 @@ from models import db, User, NewsRead
 from flask_migrate import Migrate
 import uuid
 from datetime import timedelta
+from dotenv import load_dotenv
+import os
+
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)
 # アプリケーションのセッション秘密鍵を設定
-app.secret_key = 'x21081_horii'
+app.secret_key = os.getenv('FLASK_APP_SECRET_KEY')
 
 db.init_app(app)
 migrate = Migrate(app, db)
 
+load_dotenv()  # .envファイルから環境変数を読み込む
 
 # OpenWeatherMapのAPIキー
-OPENWEATHERMAP_API_KEY = "6ce9140b11ce753578a1b1dc3ad3086e"
+OPENWEATHERMAP_API_KEY = os.environ.get("OPENWEATHERMAP_API_KEY")
 
 # グローバル変数として音声ファイルのリストを定義
 audio_files = []
@@ -32,8 +37,8 @@ audio_folder = os.path.join(app.root_path, 'audio')
 if not os.path.exists(audio_folder):
     os.makedirs(audio_folder)
 
-# Google Cloudの認証情報を設定
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "rational-logic-388613-c086065380ae.json"
+# Google Cloudの認証情報を環境変数から取得
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 # 初期のニュースフィードのURL
 INITIAL_RSS_URL = "https://news.google.com/news/rss/headlines/section/topic/NATION.ja_jp/%E5%9B%BD%E5%86%85?ned=jp&hl=ja&gl=JP"
